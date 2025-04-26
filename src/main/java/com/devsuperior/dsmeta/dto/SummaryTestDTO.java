@@ -2,17 +2,20 @@ package com.devsuperior.dsmeta.dto;
 
 import com.devsuperior.dsmeta.entities.Sale;
 
-public class SummaryTest1DTO {
+public class SummaryTestDTO {
 
     private String sellerName;
     private Double total;
 
-    public SummaryTest1DTO(Sale entity) {
+    public SummaryTestDTO(Sale entity) {
         sellerName = entity.getSeller().getName();
         total = entity.getAmount();
     }
 
-    public SummaryTest1DTO(String sellerName, Double total) {
+    public SummaryTestDTO() {
+    }
+
+    public SummaryTestDTO(String sellerName, Double total) {
         this.sellerName = sellerName;
         this.total = total;
     }
